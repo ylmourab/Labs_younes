@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.blog');
+    return view('pages.home');
 });
 
 Route::get('/service', function () {
