@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/service', function () {
     return view('pages.contact');
 });
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');
