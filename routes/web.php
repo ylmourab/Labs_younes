@@ -1,5 +1,12 @@
 <?php
 
+use App\Models\Contact;
+use App\Models\Discover;
+use App\Models\Nav;
+use App\Models\Service;
+use App\Models\Team;
+use App\Models\Testimonial;
+use App\Models\Title;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +21,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+
+    $nav = Nav::all();
+    $service = Service::all();
+    $discover = Discover::all();
+    $testimonial = Testimonial::all();
+    $team = Team::all();
+    $contact = Contact::all();
+    $title = Title::all();
+    return view('pages.home', compact('nav','service','discover','testimonial','team','contact','title'));
 });
 
 Route::get('/service', function () {
-    return view('pages.contact');
+    $nav = Nav::all();
+    return view('pages.contact', compact('nav'));
 });
 
 Auth::routes();
