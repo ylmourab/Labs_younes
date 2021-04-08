@@ -13,8 +13,11 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
+
     {
-        //
+        $service = Service::all();
+        return view('bo.ServiceIndex', compact('service'));
     }
 
     /**

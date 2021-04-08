@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
 use App\Models\Contact;
 use App\Models\Discover;
 use App\Models\Nav;
@@ -36,6 +37,14 @@ Route::get('/service', function () {
     $nav = Nav::all();
     return view('pages.contact', compact('nav'));
 });
+
+
+Route::get('/service-index',[ServiceController::class,'index']);
+
+
+
+
+
 
 Auth::routes();
 

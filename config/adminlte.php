@@ -224,11 +224,7 @@ return [
     */
 
     'menu' => [
-        [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
+      
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -241,53 +237,41 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'BASE DE DONEES'],
+     
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
+            'text'    => 'HOME',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Nav',
+                    'url'  => '',
+                ],
+                [
+                    'text' => 'Caroussel',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Service',
+                    'url'  => '/service-index',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Discover',
                     'url'  => '#',
                 ],
+                [
+                    'text' => 'Testimonial',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Team',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Contact',
+                    'url'  => '#',
+                ],
+               
             ],
         ],
         ['header' => 'labels'],

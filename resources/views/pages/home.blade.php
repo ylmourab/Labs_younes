@@ -33,17 +33,21 @@
 			<div class="container">
 				<div class="row">
 					<!-- single card -->
+					@foreach ($service->random(3) as $item)
 					<div class="col-md-4 col-sm-6">
 						<div class="lab-card">
 							<div class="icon">
 								<i class="flaticon-023-flask"></i>
 							</div>
-							<h2>Get in the lab</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
+						<h2>{{$item->titre}}</h2>
+						<p>{{$item->text}}</p>
 						</div>
 					</div>
+						
+					@endforeach
+					
 					<!-- single card -->
-					<div class="col-md-4 col-sm-6">
+					{{-- <div class="col-md-4 col-sm-6">
 						<div class="lab-card">
 							<div class="icon">
 								<i class="flaticon-011-compass"></i>
@@ -51,9 +55,9 @@
 							<h2>Projects online</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
 						</div>
-					</div>
+					</div> --}}
 					<!-- single card -->
-					<div class="col-md-4 col-sm-12">
+					{{-- <div class="col-md-4 col-sm-12">
 						<div class="lab-card">
 							<div class="icon">
 								<i class="flaticon-037-idea"></i>
@@ -61,7 +65,7 @@
 							<h2>SMART MARKETING</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>
@@ -76,10 +80,10 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequat ante ac congue. Quisque porttitor porttitor tempus. Donec maximus ipsum non ornare vporttitor porttitorestibulum. Sed libero nibh, feugiat at enim id, bibendum sollicitudin arcu.</p>
+					<p>{{$discover[0]->text1}}</p>
 					</div>
 					<div class="col-md-6">
-						<p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. Quisque porttitor porttitorlaoreet vel risus et luctus.</p>
+						<p>{{$discover[0]->text2}}</p>
 					</div>
 				</div>
 				<div class="text-center mt60">
@@ -112,90 +116,25 @@
 						<h2>What our clients say</h2>
 					</div>
 					<div class="owl-carousel" id="testimonial-slide">
+						@foreach ($testimonial as $item)
 						<!-- single testimonial -->
 						<div class="testimonial">
 							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
+						<p>{{$item->quote}}</p>
 							<div class="client-info">
 								<div class="avatar">
 									<img src="img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
+									<h2>{{$item->name}}</h2>
+									<p>{{$item->role}}</p>
 								</div>
 							</div>
 						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/01.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/01.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
+							
+						@endforeach
+						
+						
 					</div>
 				</div>
 			</div>
@@ -211,6 +150,7 @@
 				<h2>Get in <span>the Lab</span> and see the services</h2>
 			</div>
 			<div class="row">
+				@foreach ($service->random(9) as $item)
 				<!-- single service -->
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
@@ -218,107 +158,15 @@
 							<i class="flaticon-023-flask"></i>
 						</div>
 						<div class="service-text">
-							<h2>Get in the lab</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
+						<h2>{{$item->titre}}</h2>
+						<p>{{$item->text}}</p>
 						</div>
 					</div>
 				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-011-compass"></i>
-						</div>
-						<div class="service-text">
-							<h2>Projects online</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-037-idea"></i>
-						</div>
-						<div class="service-text">
-							<h2>SMART MARKETING</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-039-vector"></i>
-						</div>
-						<div class="service-text">
-							<h2>Social Media</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-036-brainstorming"></i>
-						</div>
-						<div class="service-text">
-							<h2>Brainstorming</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-026-search"></i>
-						</div>
-						<div class="service-text">
-							<h2>Documented</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-018-laptop-1"></i>
-						</div>
-						<div class="service-text">
-							<h2>Responsive</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-043-sketch"></i>
-						</div>
-						<div class="service-text">
-							<h2>Retina ready</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
-				<!-- single service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-012-cube"></i>
-						</div>
-						<div class="service-text">
-							<h2>Ultra modern</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div>
+					
+				@endforeach
+				
+				
 			</div>
 			<div class="text-center">
 				<a href="" class="site-btn">Browse</a>
@@ -336,30 +184,19 @@
 				<h2>Get in <span>the Lab</span> and  meet the team</h2>
 			</div>
 			<div class="row">
+				@foreach ($team as $item)
 				<!-- single member -->
 				<div class="col-sm-4">
 					<div class="member">
 						<img src="img/team/1.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Project Manager</h3>
+						<h2>{{$item->nom}}</h2>
+						<h3>{{$item->role}}</h3>
 					</div>
 				</div>
-				<!-- single member -->
-				<div class="col-sm-4">
-					<div class="member">
-						<img src="img/team/2.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Junior developer</h3>
-					</div>
-				</div>
-				<!-- single member -->
-				<div class="col-sm-4">
-					<div class="member">
-						<img src="img/team/3.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Digital designer</h3>
-					</div>
-				</div>
+					
+				@endforeach
+				
+				
 			</div>
 		</div>
 	</div>
@@ -394,11 +231,11 @@
 					<div class="section-title left">
 						<h2>Contact us</h2>
 					</div>
-					<p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. </p>
-					<h3 class="mt60">Main Office</h3>
-					<p class="con-item">C/ Libertad, 34 <br> 05200 Arévalo </p>
-					<p class="con-item">0034 37483 2445 322</p>
-					<p class="con-item">hello@company.com</p>
+					<p>{{$contact[0]->text}}</p>
+					<h3 class="mt60">{{$contact[0]->subtitle}}</h3>
+					<p class="con-item">{{$contact[0]->adresse}}</p>
+					<p class="con-item">{{$contact[0]->numero}}</p>
+					<p class="con-item">{{$contact[0]->mail}}</p>
 				</div>
 				<!-- contact form -->
 				<div class="col-md-6 col-pull">
